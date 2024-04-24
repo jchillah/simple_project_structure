@@ -12,41 +12,44 @@ class OverviewScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Übersicht'),
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Center(
-            child: Column(
-          children: [
-            ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => ChatScreen(
-                            loggedInUser: _generateSampleUser(),
-                            messages: _generateSampleMessages(),
-                          )),
-                );
-              },
-              child: const Text('Zum Chat'),
-            ),
-            const SizedBox(
-              height: 64,
-            ),
-            IconButton(
-              icon: const Icon(Icons.settings),
-              onPressed: () {
-                Navigator.push(
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Center(
+              child: Column(
+            children: [
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => SettingsScreen(
-                              user: _generateSampleUser(),
-                              themeMode: _generateSampleThemeMode(),
-                            )));
-              },
-            ),
-          ],
-        )),
+                        builder: (context) => ChatScreen(
+                              loggedInUser: _generateSampleUser(),
+                              messages: _generateSampleMessages(),
+                            )),
+                  );
+                },
+                child: const Text('Zum Chat'),
+              ),
+              const SizedBox(
+                height: 64,
+              ),
+              IconButton(
+                icon: const Icon(Icons.settings),
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => SettingsScreen(
+                                user: _generateSampleUser(),
+                                themeMode: _generateSampleThemeMode(),
+                              )));
+                },
+              ),
+              const Image(image: AssetImage('assets/images/ayy_duck.png')),
+            ],
+          )),
+        ),
       ),
     );
   }
