@@ -1,3 +1,13 @@
-# simple_project_structure
+# Simple Project Structure
 
-A new Flutter project.
+![alt text](image.png)
+
+
+## Feature First
+
+- Pro Feature ein Ordner 
+- jedes Feature besteht aus:
+    - `domain`-Ordner
+        - hier liegen die Model-Klasse
+    - `presentation`-Ordner
+        - hier liegen die Widgets
