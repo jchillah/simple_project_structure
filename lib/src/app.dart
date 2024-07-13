@@ -13,7 +13,7 @@ class App extends StatelessWidget {
       home: const OverviewScreen(),
       theme: FlexThemeData.light(scheme: FlexScheme.greyLaw),
       darkTheme: FlexThemeData.dark(scheme: FlexScheme.greyLaw),
-      themeMode: ThemeMode.light,
+      themeMode: ThemeMode.system,
     );
   }
 }

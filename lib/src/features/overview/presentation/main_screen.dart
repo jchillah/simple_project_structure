@@ -41,7 +41,7 @@ class OverviewScreen extends StatelessWidget {
                       context,
                       MaterialPageRoute(
                           builder: (context) => SettingsScreen(
-                                user: _generateSampleUser(),
+                                user: _generateSampleUser2(),
                                 themeMode: _generateSampleThemeMode(),
                               )));
                 },
@@ -73,7 +73,15 @@ class OverviewScreen extends StatelessWidget {
     );
   }
 
+  User _generateSampleUser2() {
+    return User(
+      name: 'Mike',
+      email: 'mike@gmail.com',
+      photoUrl: 'https://randomuser.me/api/portraits/men/0.jpg',
+    );
+  }
+
   ThemeMode _generateSampleThemeMode() {
-    return ThemeMode.light;
+    return ThemeMode.system;
   }
 }
